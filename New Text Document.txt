@@ -1,0 +1,7 @@
+from pyspark.sql.functions import *
+from pyspark.sql.types import *
+fields = [StructField("Transacao", StringType(), True),StructField("Municipio", StringType(), True),StructField("Estado", StringType(), True),StructField("data_atualizacao", StringType(), True)]
+schema = StructType(fields)
+df = spark.read.option("delimiter", ";").schema(schema).csv("/home/base.txt")
+dfs = df.withColumn("ordem_da_transacao", row_number().over(Window.partitionBy("Municipio").orderBy(asc("Municipio"), asc("Transacao"))))
+dff = dfs.orderBy("Municipio", ascending=True)
