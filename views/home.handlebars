@@ -1,0 +1,127 @@
+
+
+    <section class="container-home section">
+        <div class="row">
+            <div class="col s12 l6 offset-l3" style="transform: translate(-10px, -40px);">
+                <form class="myform" name="id">
+            
+                <div class="progress yellow">
+                    <div class="indeterminate"></div>
+                </div>
+
+                <div class="col-md-12">
+                    <p class="center"><a href="/quiz" class="btn green" >   Quizz   </a></p>
+                    <p class="center"><a href="/memory-game" class="btn green" >Jogo da memória</a></p>
+                </div>
+
+                <div class="progress yellow">
+                    <div class="indeterminate"></div>
+                </div>
+                
+                
+            </form>
+            </div>
+        </div>
+    </section>
+<footer style="
+    margin-top: 265px;
+">
+    <td align="center">
+        <p style="display: block; text-decoration: none;">
+        <img src="https://tfcvwz.vteximg.com.br/arquivos/content-redes.png" style="display: block; max-width: 123%">
+        </p>
+        
+        <div style="position: relative; top: -59px; margin-left: 82px;">
+        <div style="display: inline-block;">
+        <a href="https://pt-br.facebook.com/vizzelaoficial/" target="_blank">
+        <img src="https://tfcvwz.vteximg.com.br/arquivos/redes-facebook.png" style="display: block;max-width: 100%;background-color:#fff;">
+        </a>
+        </div>
+        
+        <div style="display: inline-block;">
+        <a href="https://www.instagram.com/vizzelaoficial/" target="_blank">
+        <img src="https://tfcvwz.vteximg.com.br/arquivos/redes-instagram.png" style="display: block;max-width: 100%;background-color:#fff;">
+        </a>
+        </div>
+        
+        <div style="display: inline-block;">
+        <a href="https://www.pinterest.co.uk/vizzelaoficial/" target="_blank">
+        <img src="https://tfcvwz.vteximg.com.br/arquivos/redes-pinteres.png" style="display: block;max-width: 100%;background-color:#fff;">
+        </a>
+        </div>
+        
+        <div style="display: inline-block;">
+        <a href="https://www.tiktok.com/@vizzelaoficia" target="_blank">
+        <img src="https://tfcvwz.vteximg.com.br/arquivos/redes-tiktok.png" style="display: block;max-width: 100%;background-color:#fff;">
+        </a>
+        </div>
+        
+        <div style="display: inline-block;max-width: 100%">
+        <a href="https://www.youtube.com/channel/UCjW835eNjUmrYwFSeCvTY-A" target="_blank">
+        <img src="https://tfcvwz.vteximg.com.br/arquivos/redes-youtube.png?v=1" style="display: block;max-width: 100%;background-color:#fff;">
+        </a>
+        </div>
+        </div>
+    </td>
+    <div class="topnav">
+                <a href="#home" class="active">VIZZELA</a>
+                <!-- Navigation links (hidden by default) -->
+                <div id="myLinks">
+                    <a href="/">Inicio</a>
+                    <a href="https://www.vizzela.com.br/" target="_blank">Loja Virtual</a>
+                    <a href="https://www.vizzela.com.br/institucional/atendimento" target="_blank">Contato</a>
+                    <a href="https://www.vizzela.com.br/sobre-nos" target="_blank">Sobre Nós</a>
+                </div>
+                <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+</footer>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script>
+    function submitted(e){
+        e.preventDefault();
+
+        let namee = document.forms["id"]["name"].value;
+        sessionStorage.setItem("name", namee);
+    }
+    /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+<script language="Javascript">
+    function validacaoEmail() {
+    var emailStr = document.getElementById('name').value;
+    try{
+    var usuario = emailStr.substring(0, emailStr.indexOf("@"));
+    var dominio = emailStr.substring(emailStr.indexOf("@")+ 1, emailStr.length);
+    
+    if ((usuario.length >=1) &&
+        (dominio.length >=3) &&
+        (usuario.search("@")==-1) &&
+        (dominio.search("@")==-1) &&
+        (usuario.search(" ")==-1) &&
+        (dominio.search(" ")==-1) &&
+        (dominio.search(".")!=-1) &&
+        (dominio.indexOf(".") >=1)&&
+        (dominio.lastIndexOf(".") < dominio.length - 1)) {
+        sessionStorage.setItem("name", usuario);
+
+    }
+    else{
+    alert("E-mail invalido");
+    }}
+    catch{
+        adddlert("E-mail invalido");
+    }
+    }
+</script>

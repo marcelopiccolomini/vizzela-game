@@ -1,0 +1,203 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(./MontserratAlternates-Bold.ttf);
+}
+
+
+@media only screen and (min-width: 0) {
+    html {
+        font-size: 22px;
+        padding-top: 100px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    html {
+        font-size: 14.5px
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    html {
+        font-size: 15px
+    }
+}
+@media (max-width: 480px){
+    body{
+      color:whitesmoke;
+      display:block;
+      position:static;
+      width:320px;
+      height:820px;
+    }
+body{
+    background: url('Parabens e tente denovo_Prancheta 1 cópia.jpg');
+    background-position: top;
+    background-size: cover;
+    height: 80vh;
+    font-family: Montserrat;
+    background-repeat: no-repeat;
+}
+
+.btn_test {
+    display:block;
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    background-color: #c29fd8;
+    margin-top: 200px;
+    
+  }
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.quiz{
+    display: grid;
+    grid-template-rows: 60px auto;
+    width: 600px;
+    height: 500px;
+    border-radius: 50px;
+}
+
+.quiz_header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.quiz_user{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-left: 30px;
+}
+
+.quiz_body{
+    padding: 20px 30px;
+    background-color: skyblue;
+    height: 480px;
+    margin-top: 50%;
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 90%;
+    display: block;
+}
+
+.option_group{
+    list-style-type: none;
+    margin: 0px 0;
+    padding-left: 0%;
+}
+
+.option{
+    display: block;
+    width: 300px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    transition: 0.4s all;
+}
+
+.option:hover{
+    cursor: pointer;
+    border: 2px solid #341f97;
+    color: #341f97;
+}
+
+.option.active{
+    background-color: #341f97;
+    color: #fff;
+}
+
+.btn-next{
+    border: none;
+    padding: 15px 35px;
+    background-color: #341f97;
+    color: #fff;
+    border-radius: 50px;
+    transition: 0.4s all;
+}
+
+.btn-next:hover{
+    cursor: pointer;
+    background-color: greenyellow;
+    color: #000;
+}
+
+.award_icon{
+    display: block;
+    font-size: 300px;
+    color: #fff;
+}
+
+.border{
+    height: 100px;
+    width: 500px;
+    display: block;
+    justify-content: center;
+    border-radius: 10px;
+    border-color: transparent;
+    font-family: Montserrat;
+    text-align: center;
+    background-color: #c29fd8;
+}
+
+p{
+ margin-top: 30px;
+}
+
+/* Style the navigation menu */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+    width: 122%;
+    transform: translate(0px, -1356px);
+  }
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  /* Style navigation menu links */
+  .topnav a {
+    color: white;
+    padding: 12px 22px;
+    text-decoration: none;
+    font-size: 22px;
+    display: block;
+  }
+  
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Style the active link (or home/logo) */
+  .active {
+    background-color: black;
+    color: white;
+  }

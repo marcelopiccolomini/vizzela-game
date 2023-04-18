@@ -1,0 +1,21 @@
+{
+  "name": "vizzela-game",
+  "version": "1.0.0",
+  "description": "jogos interativos",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \\\"Error no test specified\\\" && exit 1"
+  },
+  "author": "Leo",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "bootstrap-icons": "^1.10.4",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.4",
+    "handlebars": "^4.7.7",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.2.0",
+    "sequelize": "^6.30.0"
+  }
+}
