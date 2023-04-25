@@ -38,6 +38,12 @@ app.get('/final', function(req, res){
 app.get('/memory-game', function(req, res){
     res.render('memory_game', {title: '🧠 Jogo da memória', css:['styles.css']});
     })
-var porta = 8080
-app.listen(porta)
-console.log('Servidor rodando na porta: '+ porta)
+    var http = require('http')
+    var porta = 21220
+     
+    http.createServer((req, res) => {
+      res.writeHead(200, {'Content-Type': 'text/plain'})
+      res.end('Hello Node')
+    }).listen(porta)
+     
+    console.log('Servidor rodando na porta: '+ porta)
