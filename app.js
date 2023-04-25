@@ -38,4 +38,6 @@ app.get('/final', function(req, res){
 app.get('/memory-game', function(req, res){
     res.render('memory_game', {title: '🧠 Jogo da memória', css:['styles.css']});
     })
-app.listen(8080)
+var porta = 8080
+app.listen(porta)
+console.log('Servidor rodando na porta: '+ porta)
